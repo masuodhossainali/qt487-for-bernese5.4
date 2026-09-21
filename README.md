@@ -7,18 +7,21 @@ To successfully install Qt 4.8.7 on Ubuntu 24.04 LTS, this repository suggests a
 You must have a licensed copy of the Bernese software for instalation on your machine.
 
 **Installation Steps**
+
 Build the Docker image using the Dockerfile provided in this repository. Please use the included build.sh script for this purpose:
 
 bash
 bash build.sh
 
 **Protect the installation directory:** 
+
 Use the following command to make the /opt/qt4.8.7 directory immutable, protecting it from accidental modification or system upgrades:
 
 bash
 sudo chattr +i /opt/qt4.8.7
 
 **Configure environment variables:**
+
 Add the following lines to your ~/.bashrc file to ensure the system can locate the Qt libraries:
 
 bash
@@ -29,9 +32,11 @@ export QT_PLUGIN_PATH=$QTDIR/plugins
 After editing .bashrc, remember to run source ~/.bashrc or restart your terminal.
 
 **Install the Bernese software:**
+
 Run the setup.sh script provided by the Bernese team. When prompted for the Qt software directory, specify the protected folder: /opt/qt4.8.7.
 
 **Launch the application:**
+
 Open a terminal and run the Bernese menu system:
 
 bash
