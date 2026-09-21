@@ -10,15 +10,21 @@ The installation steps includes:
 
 1- build the the docker image using the Docker file in this repository. Please use the build.sh script  for this purpose. 
 $bash build.sh
+
+
 2-Use the following command in order to isolate the directory /opt/qt.4.8.7 and protect it from system upgrads
 $sudo chattr +i /opt/qt4.8.7
+
+
 3-Add the following environmental variable to .bashrc
 $export QTDIR=/opt/qt4.8.7
 $export PATH=$QTDIR/bin:$PATH
 $export LD_LIBRARY_PATH=$QTDIR/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 $export QT_PLUGIN_PATH=$QTDIR/plugins
 
+
 4-Install the Bernese software using setup.sh provided to the users of this software by the Bernese team. The directory for the qt software is now the guarded folder /opt/qt.4.8.7
+
 
 5- Open terminal and run the menu system.
 $G
