@@ -18,8 +18,11 @@ $sudo chattr +i /opt/qt4.8.7
 
 3-Add the following environmental variable to .bashrc
 $export QTDIR=/opt/qt4.8.7
+
 $export PATH=$QTDIR/bin:$PATH
+
 $export LD_LIBRARY_PATH=$QTDIR/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+
 $export QT_PLUGIN_PATH=$QTDIR/plugins
 
 
