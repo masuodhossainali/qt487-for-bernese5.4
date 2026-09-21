@@ -6,6 +6,8 @@ on Ubuntu 24.04 LTS, a dockerized solution is suggested here. This solution crea
 from possible system upgrades.
 You  need a licenced copy of the Bernese software on your machine
 The installation steps includes:
+
+
 1- build the the docker image using the Docker file in this repository. Please use the build.sh script  for this purpose. 
 $bash build.sh
 2-Use the following command in order to isolate the directory /opt/qt.4.8.7 and protect it from system upgrads
