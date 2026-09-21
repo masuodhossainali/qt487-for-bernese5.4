@@ -11,6 +11,7 @@ You must have a licensed copy of the Bernese software for instalation on your ma
 Build the Docker image using the Dockerfile provided in this repository. Please use the included build.sh script for this purpose:
 
 bash
+
 bash build.sh
 
 **Protect the installation directory:** 
@@ -18,6 +19,7 @@ bash build.sh
 Use the following command to make the /opt/qt4.8.7 directory immutable, protecting it from accidental modification or system upgrades:
 
 bash
+
 sudo chattr +i /opt/qt4.8.7
 
 **Configure environment variables:**
@@ -25,10 +27,15 @@ sudo chattr +i /opt/qt4.8.7
 Add the following lines to your ~/.bashrc file to ensure the system can locate the Qt libraries:
 
 bash
+
 export QTDIR=/opt/qt4.8.7
+
 export PATH=$QTDIR/bin:$PATH
+
 export LD_LIBRARY_PATH=$QTDIR/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+
 export QT_PLUGIN_PATH=$QTDIR/plugins
+
 After editing .bashrc, remember to run source ~/.bashrc or restart your terminal.
 
 **Install the Bernese software:**
@@ -39,9 +46,10 @@ Run the setup.sh script provided by the Bernese team. When prompted for the Qt s
 
 Open a terminal and run the Bernese menu system:
 
-bash
 G
-Notes on Architecture and Licensing
+
+**Notes on Architecture and Licensing**
+
 Installing the Bernese software directly on the host system (rather than inside the container) preserves the standard Bernese data structure. Consequently, there is no need to configure shared folders between the container and the host OS for GNSS data.
 
 Furthermore, constructed Docker image does not contain a copy of the Bernese software. Therefore, sharing this Docker image with others does not violate Bernese copyright restrictions, as it only contains the open-source Qt dependencies and build tools.
