@@ -9,14 +9,17 @@ The installation steps includes:
 
 
 1- build the the docker image using the Docker file in this repository. Please use the build.sh script  for this purpose. 
+
 $bash build.sh
 
 
 2-Use the following command in order to isolate the directory /opt/qt.4.8.7 and protect it from system upgrads
+
 $sudo chattr +i /opt/qt4.8.7
 
 
 3-Add the following environmental variable to .bashrc
+
 $export QTDIR=/opt/qt4.8.7
 
 $export PATH=$QTDIR/bin:$PATH
