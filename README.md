@@ -33,6 +33,7 @@ $export QT_PLUGIN_PATH=$QTDIR/plugins
 
 
 5- Open terminal and run the menu system.
+
 $G
 
 installing the Bernese software normally (not from a container) helps you keep the Bernese data structure and you do not need any shared folder betwwen the container in which the Bernese is running a nd your OS hosting the GNSS data. The container and image do not include a copy of Bernese and therefore no need for the copyright when you hare your docker image with others.
